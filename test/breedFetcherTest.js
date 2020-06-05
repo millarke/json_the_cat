@@ -15,7 +15,7 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
-  it('not working', (done) => {
+  it('hits error that says the data length is <= 0 which means there was no result for the search query', (done) => {
     fetchBreedDescription('Sibedsdcrian', (err, desc) => {
       // we expect no error for this scenario
       assert.equal(err, 'sorry! this kitty does not exist!');
